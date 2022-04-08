@@ -1,13 +1,15 @@
 import {defineStore} from 'pinia'
 
-export const userThemeStore = defineStore('theme',{
+export const userNameStore = defineStore('index',{
     state:()=>({
-        theme:'light'
+        name:'hao'
     }),
-    // actions:{
-    //     setTheme(state,payload){
-    //         state.theme = payload;
-    //         // document.querySelector('body').className = payload;
-    //     }
-    // }
+    getters:{
+        addName:(state)=> state.name + ' i '
+    },
+    actions:{
+        longName(){
+            this.name =  this.name + ' kun '
+        }
+    }
 })

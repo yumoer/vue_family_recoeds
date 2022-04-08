@@ -7,7 +7,7 @@
 </script>
 
 <style>
-@import './assets/base.css';
+@import 'assets/css/base.css';
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -18,17 +18,6 @@
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-/* 魔法代码：一键全站切换深色模式 */
-.dark{
-  background-color: #000000;
-  color: #fff;
-}
-
-.light{
-  background-color: #ffffff;
-  color: #000000;
 }
 
 .logo {

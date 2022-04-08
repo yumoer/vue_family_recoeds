@@ -21,7 +21,7 @@ export default defineConfig({
     //   { find: '@', replacement: resolve(__dirname, 'src') }
     // ],
     alias: { //配置别名
-      '@': fileURLToPath(new URL('src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     },
     // 情景导出 package.json 配置中的exports字段
     conditions: [],

@@ -1,15 +1,12 @@
 import {defineStore} from 'pinia'
 
-export const userNameStore = defineStore('index',{
+export const userThemeStore = defineStore('theme',{
     state:()=>({
-        name:'hao'
+        isLight:true
     }),
-    getters:{
-        addName:(state)=> state.name + ' i '
-    },
     actions:{
-        longName(){
-            this.name =  this.name + ' kun '
+        setTheme(){
+            this.isLight = !this.isLight
         }
     }
 })

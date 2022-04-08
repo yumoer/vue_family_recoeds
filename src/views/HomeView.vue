@@ -1,24 +1,23 @@
 <template>
   <span class="light-scheme">www</span>
-  <button @click="change">切换</button>
+  <button @click="themeChange">切换</button>
 </template>
 
 <script setup lang="ts">
-// 获取布局配置信息
-import {ref} from "vue";
-const theme = ref(true);
-function change(){
-  const body = document.documentElement as HTMLElement;
-  if (theme.value) {
-    theme.value = false;
-    body.setAttribute('data-theme', 'dark');
-  }else {
-    theme.value = true;
-    body.setAttribute('data-theme', '');
-  }
-}
+import {themeChange} from "@/assets/ts/utils";
+import {onMounted} from "vue";
+import {fetchUserInfo} from '@/api'
+console.log(import.meta.env)
+// onMounted(async () => {
+//   try {
+//     let res = await fetchUserInfo()
+//     console.log(res)
+//   } catch (error) {
+//     console.log(error)
+//   }
+// })
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>

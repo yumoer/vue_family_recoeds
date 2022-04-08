@@ -48,6 +48,7 @@
   --color-text: var(--vt-c-text-dark-2);
 }
 
+/* 魔法代码：一键全站切换深色模式 */
 /*@media (prefers-color-scheme: dark) {*/
 /*  :root {*/
 /*    --color-background: var(--vt-c-black);*/

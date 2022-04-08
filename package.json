@@ -14,10 +14,12 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@vueuse/core": "^4.0.8",
     "pinia": "^2.0.9",
+    "sass": "^1.50.0",
+    "sass-loader": "^12.6.0",
     "vue": "^3.2.26",
-    "vue-router": "^4.0.12",
-    "@vueuse/core": "^4.0.8"
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@cypress/vite-dev-server": "^2.2.2",

@@ -27,7 +27,7 @@ export default defineConfig({
     conditions: [],
     // 导入时想要省略的扩展名列表
     // 不建议使用 .vue 影响IDE和类型支持
-    extensions:['.mjs','.js','.ts','.jsx','.tsx','.json']
+    extensions:['.mjs','.ts','.ts','.jsx','.tsx','.json']
   },
 
   //本地运行配置，以及反向代理配置

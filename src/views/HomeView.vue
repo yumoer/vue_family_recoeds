@@ -1,6 +1,7 @@
 <template>
-  <span class="light-scheme">www</span>
-  <button @click="themeChange">切换</button>
+  <div class="home">
+    <h1>日历</h1>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -19,5 +20,11 @@ console.log(import.meta.env)
 </script>
 
 <style lang="scss" scoped>
-
+.home{
+  width: 100%;
+  height:80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>

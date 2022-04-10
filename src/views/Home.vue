@@ -1,14 +1,21 @@
 <template>
   <div class="home">
-    <h1>日历</h1>
+
+<!--    <h1>日历</h1>-->
+<!--    <button @click="login">登录</button>-->
   </div>
 </template>
 
 <script setup lang="ts">
-import {themeChange} from "@/assets/ts/utils";
-import {onMounted} from "vue";
-import {fetchUserInfo} from '@/api'
-console.log(import.meta.env)
+import { themeChange } from "@/assets/ts/utils";
+import { onMounted } from "vue";
+import { fetchUserInfo } from "@/api";
+import { useRouter } from "vue-router";
+const router = useRouter();
+console.log(import.meta.env);
+function login() {
+  router.push("/login");
+}
 // onMounted(async () => {
 //   try {
 //     let res = await fetchUserInfo()
@@ -20,9 +27,9 @@ console.log(import.meta.env)
 </script>
 
 <style lang="scss" scoped>
-.home{
+.home {
   width: 100%;
-  height:80px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;

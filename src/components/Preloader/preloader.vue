@@ -1,16 +1,19 @@
 <template>
-  <div id="my-component">登录</div>
+  <!--   Preloader-->
+  <div id="preloader">
+    <div class="preload-content">
+      <div id="dream-load"></div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  mixins: [],
-  props: {},
   data() {
     return {};
   },
   computed: {},
-  watch: {},
+
   methods: {},
 };
 </script>

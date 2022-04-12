@@ -6,18 +6,66 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
-      component: () => import("@/views/Home.vue"),
+      name: "index",
+      meta: {
+        title: "首页",
+      },
+      component: () => import("@/views/Index.vue"),
     },
     {
       path: "/login",
       name: "login",
-      component: () => import("@/views/LoginView/login.vue"),
+      meta: {
+        title: "登录",
+      },
+      component: () => import("@/views/Login/login.vue"),
+    },
+    {
+      path: "/about",
+      name: "about",
+      meta: {
+        title: "关于我们",
+      },
+      component: () => import("@/views/About/about.vue"),
+    },
+    {
+      path: "/services",
+      name: "services",
+      meta: {
+        title: "服务",
+      },
+      component: () => import("@/views/Services/services.vue"),
+    },
+    {
+      path: "/faq",
+      name: "faq",
+      meta: {
+        title: "服务",
+      },
+      component: () => import("@/views/Faq/faq.vue"),
+    },
+    {
+      path: "/contact",
+      name: "contact",
+      meta: {
+        title: "服务",
+      },
+      component: () => import("@/views/Contact/contact.vue"),
+    },
+    {
+      path: "/blog",
+      name: "blog",
+      meta: {
+        title: "博客",
+      },
+      component: () => import("@/views/Blog/blog.vue"),
     },
   ],
 });
+
 router.beforeEach((to, from, next) => {
   setDocumentTitle(to.meta.title as string);
   next();
 });
+
 export default router;

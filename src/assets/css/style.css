@@ -95,6 +95,7 @@ a,
 a:hover,
 a:focus,
 a:active {
+    cursor: pointer;
     text-decoration: none;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms;
@@ -990,8 +991,8 @@ ol {
 .login-btn:hover,
 .login-btn:focus {
     color: #fff;
-    background: #7450fe;
-    border-color: #7450fe;
+    background: linear-gradient(to right,#7450fe 0%,#21d397 100%);
+    border-color: #fff;
 }
 
 .dream-btn {

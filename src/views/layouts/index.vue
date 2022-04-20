@@ -1,26 +1,16 @@
 <template>
-  <div id="my-component">
-  </div>
+  <div></div>
 </template>
 
 <script>
-
 export default {
   mixins: [],
   props: {},
   data() {
-    return {}
-  },
-  computed: {},
-  watch: {},
-  created() {
-  },
-  mounted() {
-  },
-  destroyed() {
+    return {};
   },
   methods: {},
-}
+};
 </script>
 
 <style lang="scss" scoped>

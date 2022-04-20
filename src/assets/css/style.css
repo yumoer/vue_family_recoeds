@@ -1182,8 +1182,8 @@ ol {
 /* ##### 3.0 Wellcome Area CSS ##### */
 .hero-section{
     position: relative;
-    min-height: 700px;
-    background: url('../img/bg-img/header2.jpg') no-repeat bottom center;
+    min-height: 100vh;
+    background: url('src/assets/img/bg-img/header2.jpg') no-repeat bottom center;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -3613,7 +3613,8 @@ p.artficial:before{
 
 
 .ico-bg2{
-    background-color: #2051e9;
+    background-image: linear-gradient(to right, #4834d4 0%, #341f97 100%);
+    background-image: -webkit-linear-gradient(to right, #4834d4 0%, #341f97 100%);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: top

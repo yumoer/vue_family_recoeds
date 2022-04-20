@@ -18,42 +18,32 @@
                   style="line-height: 1.7"
                 >
                   <span className="w-text bold"
-                    >Revolutionary Solutions to Business Problems Using New
-                  </span>
+                    >Revolutionary Solutions to Business Problems Using
+                    New</span
+                  >
                   <span
                     className="cd-words-wrapper"
                     style="width: 210px; display: inline-block"
                   >
-                    <b className="gradient-text cyan bolder is-hidden"
-                      >Artificial Intelligence<span className="o-text"
-                        >.</span
-                      ></b
-                    >
-                    <b className="gradient-text cyan bolder is-hidden"
-                      >Machine Learning<span className="o-text">.</span></b
-                    >
-                    <b className="gradient-text cyan bolder is-visible"
-                      >Data Analysis<span className="o-text">.</span></b
-                    >
+                    <b className="gradient-text cyan bolder is-hidden" v-for="(ele,index) in data.arr" :key="index">
+                      {{ ele }}
+                      <span className="o-text">.</span>
+                    </b>
                   </span>
                 </h1>
               </div>
-              <p className="g-text fadeInUp" data-wow-delay="0.3s">
-                Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Odit
-                quaerat est, a labore excepturi rem sed eius facere error!
-                Dolore in perspiciatis porro dolor debitis Odit quaerat est
-              </p>
+              <p className="g-text fadeInUp" data-wow-delay="0.3s">{{data.info}}</p>
               <div
                 className="dream-btn-group fadeInUp w-text"
                 data-wow-delay="0.4s"
               >
                 <a href="#" className="btn more-btn pink mr-3">Learn More</a>
-                <div className="video-demo-prev">
-                  <a href="#" className="btn more-btn video-btn v2 mr-3"
-                    ><i className="fa fa-play"></i>
-                  </a>
-                  <span>Watch Demo</span>
-                </div>
+<!--                <div className="video-demo-prev">-->
+<!--                  <a href="#" className="btn more-btn video-btn v2 mr-3"-->
+<!--                    ><i className="fa fa-play"></i>-->
+<!--                  </a>-->
+<!--                  <span>Watch Demo</span>-->
+<!--                </div>-->
               </div>
             </div>
           </div>
@@ -74,8 +64,13 @@
   </main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { reactive } from "vue";
 
-<style lang="scss" scoped>
+const data = reactive({
+  info:'Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Odit quaerat est, a labore excepturi rem sed eius facere error!Dolore in perspiciatis porro dolor debitis Odit quaerat est',
+  arr: ["Artificial Intelligence", "Machine Learning", "Data Analysis"],
+});
+</script>
 
-</style>
+<style lang="scss" scoped></style>

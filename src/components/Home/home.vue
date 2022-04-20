@@ -1,8 +1,8 @@
 <template>
   <Main />
   <Section />
-  <Aside />
-  <Slider />
+<!--  <Aside />-->
+<!--  <Slider />-->
 </template>
 
 <script lang="ts">

@@ -40,6 +40,7 @@
 <!--                    <li><a href="index-demo-6.html">Home style 6</a></li>-->
 <!--                  </ul>-->
                 </li>
+                <li><a @click="goToPage('/calendar')">Calendar</a></li>
                 <li><a @click="goToPage('/about')">About Us</a></li>
                 <li><a @click="goToPage('/services')">Services</a></li>
                 <li><a @click="goToPage('/faq')">FAQ</a></li>

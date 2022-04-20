@@ -60,6 +60,14 @@ const router = createRouter({
       },
       component: () => import("@/views/Blog/blog.vue"),
     },
+    {
+      path: "/calendar",
+      name: "calendar",
+      meta: {
+        title: "日历",
+      },
+      component: () => import("@/views/layouts/Calendar/calendar.vue"),
+    },
   ],
 });
 

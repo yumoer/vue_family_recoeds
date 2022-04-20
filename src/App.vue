@@ -2,7 +2,7 @@
   <Preloader />
   <Header v-if="route.name !== 'login'"/>
   <router-view />
-  <Footer v-if="route.name !== 'login'"/>
+<!--  <Footer v-if="route.name !== 'login'"/>-->
 </template>
 
 <script lang="ts">

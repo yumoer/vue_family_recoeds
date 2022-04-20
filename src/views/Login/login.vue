@@ -87,16 +87,18 @@ const submitForm = function () {
 
 <style lang="scss" scoped>
 ::v-deep(.el-input__inner) {
-  margin-bottom: 10px;
   height: 40px;
 }
 
-::v-deep(.el-input-group__prepend) {
+.iconfont{
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .button {
   text-decoration: none;
   width: 300px;
+  margin-top: 10px;
   /* position: absolute; */
   border: none;
   font-size: 14px;
@@ -107,7 +109,7 @@ const submitForm = function () {
   text-align: center;
   background: linear-gradient(90deg,#6555FF,#4089FF,#40C6FF,#4089FF,#6555FF);
   background-size: 300%;
-  border-radius: 30px;
+  border-radius: 10px;
   z-index: 1;
 }
 

@@ -23,6 +23,8 @@ specifiers:
   typescript: ~4.5.4
   vite: ^2.7.7
   vue: ^3.2.26
+  vue-baidu-calendar: ^1.0.8
+  vue-event-calendar: ^1.5.2
   vue-router: ^4.0.12
   vue-tsc: ^0.29.8
 
@@ -33,6 +35,8 @@ dependencies:
   sass: registry.npmmirror.com/sass/1.50.0
   sass-loader: registry.npmmirror.com/sass-loader/12.6.0_sass@1.50.0
   vue: registry.npmmirror.com/vue/3.2.26
+  vue-baidu-calendar: registry.npmmirror.com/vue-baidu-calendar/1.0.8_vue@3.2.26
+  vue-event-calendar: registry.npmmirror.com/vue-event-calendar/1.5.2
   vue-router: registry.npmmirror.com/vue-router/4.0.12_vue@3.2.26
 
 devDependencies:
@@ -4731,6 +4735,17 @@ packages:
       vscode-typescript-languageservice: registry.npmmirror.com/vscode-typescript-languageservice/0.29.8
     dev: true
 
+  registry.npmmirror.com/vue-baidu-calendar/1.0.8_vue@3.2.26:
+    resolution: {integrity: sha512-zuqkfaZt81C2hnG0Mk1DeMz1JrhWV2WEsfn2OOCOfwh2k+HLmGwidWAvurTvVWeEZeC6jfuSbb2Iebbp4YyDDA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-baidu-calendar/-/vue-baidu-calendar-1.0.8.tgz}
+    id: registry.npmmirror.com/vue-baidu-calendar/1.0.8
+    name: vue-baidu-calendar
+    version: 1.0.8
+    peerDependencies:
+      vue: ^3.0.4
+    dependencies:
+      vue: registry.npmmirror.com/vue/3.2.26
+    dev: false
+
   registry.npmmirror.com/vue-demi/0.12.1_vue@3.2.26:
     resolution: {integrity: sha512-QL3ny+wX8c6Xm1/EZylbgzdoDolye+VpCXRhI2hug9dJTP3OUJ3lmiKN3CsVV3mOJKwFi0nsstbgob0vG7aoIw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-demi/-/vue-demi-0.12.1.tgz}
     id: registry.npmmirror.com/vue-demi/0.12.1
@@ -4770,6 +4785,14 @@ packages:
       - supports-color
     dev: true
 
+  registry.npmmirror.com/vue-event-calendar/1.5.2:
+    resolution: {integrity: sha512-ZUwTRl46GPOzYNGbtVdEicsw14JPC3YoaUbRf6eryAbomXwMcO0eCInGHDC+yZUWPGzj+trRObhVfTt4ytGFuA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-event-calendar/-/vue-event-calendar-1.5.2.tgz}
+    name: vue-event-calendar
+    version: 1.5.2
+    dependencies:
+      vue: registry.npmmirror.com/vue/2.6.14
+    dev: false
+
   registry.npmmirror.com/vue-router/4.0.12_vue@3.2.26:
     resolution: {integrity: sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue-router/download/vue-router-4.0.12.tgz}
     id: registry.npmmirror.com/vue-router/4.0.12
@@ -4795,6 +4818,12 @@ packages:
       typescript: registry.npmmirror.com/typescript/4.5.4
       vscode-vue-languageservice: registry.npmmirror.com/vscode-vue-languageservice/0.29.8
     dev: true
+
+  registry.npmmirror.com/vue/2.6.14:
+    resolution: {integrity: sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue/-/vue-2.6.14.tgz}
+    name: vue
+    version: 2.6.14
+    dev: false
 
   registry.npmmirror.com/vue/3.2.26:
     resolution: {integrity: sha512-KD4lULmskL5cCsEkfhERVRIOEDrfEL9CwAsLYpzptOGjaGFNWo3BQ9g8MAb7RaIO71rmVOziZ/uEN/rHwcUIhg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vue/download/vue-3.2.26.tgz}

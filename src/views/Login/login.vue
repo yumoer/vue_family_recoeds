@@ -26,14 +26,14 @@
         <el-form
           :model="param"
           :rules="rules"
-          ref="login"
+          ref="ruleFormRef"
           label-width="0px"
           class="ms-content"
         >
           <div class="ms-header">生活打点滴</div>
-          <el-form-item prop="name">
+          <el-form-item prop="user">
             <el-input
-              v-model="param.name"
+              v-model="param.user"
               placeholder="请输入用户名"
               clearable
               class="input-with-select"
@@ -57,7 +57,10 @@
             </el-input>
           </el-form-item>
 
-          <el-button :loading="loading" class="button" @click="submitForm"
+          <el-button
+            :loading="loading"
+            class="button"
+            @click="submitForm(ruleFormRef)"
             >登录</el-button
           >
         </el-form>
@@ -67,21 +70,56 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from "vue";
-import type { FormRules } from 'element-plus'
+import { reactive, ref, nextTick } from "vue";
+import type { FormInstance, FormRules } from "element-plus";
+import { ElMessage } from "element-plus";
+import { useRouter } from "vue-router";
+import { useUserStore } from "@/stores/user";
+
+const ruleFormRef = ref<FormInstance>();
+const router = useRouter();
+const user = useUserStore();
 const param = reactive({
-  name: "",
-  pwd: "",
+  user: "aaa",
+  pwd: "bbb",
 });
 const loading = ref(false);
 const rules = reactive<FormRules>({
-  name: [
-    { required: true, message: "Please input Activity name", trigger: "blur" },
-    { min: 3, max: 5, message: "Length should be 3 to 5", trigger: "blur" },
+  user: [
+    { required: true, message: "请输入用户名", trigger: "blur" },
+    { min: 2, max: 16, message: "用户名超出字段", trigger: "change" },
+  ],
+  pwd: [
+    { required: true, message: "请输入密码", trigger: "blur" },
+    { min: 2, max: 16, message: "密码超出字段", trigger: "change" },
   ],
 });
-const submitForm = function () {
-  console.log("111");
+
+const submitForm = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  loading.value = true;
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      nextTick(() => {
+        setTimeout(() => {
+          loading.value = false;
+          ElMessage({
+            message: " 欢迎 一化北溟鱼 登录成功 ",
+            type: "success",
+          });
+          const query = {
+            user: param.user,
+            name: "一化北溟鱼",
+            token: Date.now(),
+          };
+          user.updateState(query);
+          router.push("/");
+        }, 2000);
+      });
+    } else {
+      console.log("error submit!", fields);
+    }
+  });
 };
 </script>
 
@@ -90,7 +128,11 @@ const submitForm = function () {
   height: 40px;
 }
 
-.iconfont{
+::v-deep(.el-form-item__error) {
+  left: 70px;
+}
+
+.iconfont {
   font-weight: bold;
   font-size: 20px;
 }
@@ -107,7 +149,14 @@ const submitForm = function () {
   height: 3em;
   line-height: 2em;
   text-align: center;
-  background: linear-gradient(90deg,#6555FF,#4089FF,#40C6FF,#4089FF,#6555FF);
+  background: linear-gradient(
+    90deg,
+    #6555ff,
+    #4089ff,
+    #40c6ff,
+    #4089ff,
+    #6555ff
+  );
   background-size: 300%;
   border-radius: 10px;
   z-index: 1;

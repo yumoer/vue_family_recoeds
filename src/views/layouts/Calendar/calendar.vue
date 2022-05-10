@@ -20,7 +20,7 @@
             <div class="col-12">
               <nav aria-label="breadcrumb" class="breadcumb--con text-center">
                 <h2 class="w-text title wow fadeInUp" data-wow-delay="0.2s">
-                  Calendar
+                  日历记录
                 </h2>
                 <ol
                   class="breadcrumb justify-content-center wow fadeInUp"
@@ -51,7 +51,6 @@
               <img src="src/assets/img/core-img/about3.png" alt="" />
             </div>
           </div>
-
           <div class="col-12 col-lg-6 offset-lg-0 mt-s">
             <div class="who-we-contant">
               <div
@@ -70,7 +69,7 @@
               <h4 class="fadeInUp" data-wow-delay="0.3s">
                 We are a Machine Learning Consulting Firm Experienced in AI
               </h4>
-              <p class="fadeInUp" data-wow-delay="0.4s">
+              <p class="fadeInUp" data-wow-delay="0.4s" style="color: #888">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Suscipit eum illum tempora? Ducimus eum culpa voluptates dolorem
                 dolorum et sit nisi, mollitia animi porro fuga sequi, molestias
@@ -139,11 +138,40 @@
             </div>
           </div>
         </div>
+        <div class="row align-items-center" style="width:600px;height: 500px;margin-top: 50px">
+          <baidu-calendar @change="change" :date="date" :range="range" />
+          <div>sss</div>
+        </div>
       </div>
     </section>
   </div>
 </template>
 
-<script></script>
+<script lang="ts" setup>
+import { ref } from "vue";
+// const value = ref(new Date());
+const date = ref(""); //设置日期，若不设置，则默认为今天
+//date改变触发事件
+const change = (obj: void) => {
+  console.log("obj", obj);
+};
+const range = [2015, 2025]; //设置年份范围 默认[2010,2030]
+</script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+::v-deep(.op-calendar-pc-right-almanacbox) {
+  display: none;
+}
+::v-deep(.op-calendar-pc-right-day) {
+  margin: 2px 60px;
+  float: left;
+}
+::v-deep(.op-calendar-pc-right-date) {
+  font-size: 20px;
+  line-height: 60px;
+  width: 400px;
+}
+::v-deep(.op-calendar-pc-right-lunar c-gap-top-small) {
+  float: left;
+}
+</style>

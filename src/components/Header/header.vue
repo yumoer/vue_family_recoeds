@@ -6,8 +6,9 @@
         <!-- Classy Menu -->
         <nav class="classy-navbar light justify-content-between" id="dreamNav">
           <!-- Logo -->
-          <a class="nav-brand light" href="#"
-            ><img src="src/assets/img/core-img/logo.png" alt="logo" /> Robostam
+          <a class="nav-brand light" @click="goToPage('/')"
+            ><img src="src/assets/img/core-img/logo.png" alt="logo" /> Life
+            Drips
           </a>
 
           <!-- Navbar Toggler -->
@@ -29,42 +30,34 @@
             <!-- Nav Start -->
             <div class="classynav">
               <ul id="nav">
-                <li>
-                  <a @click="goToPage('/')">Home</a>
-<!--                  <ul class="dropdown">-->
-<!--                    <li><a @click="goToPage('/')">Home style 1</a></li>-->
-<!--                    <li><a href="index-demo-2.html">Home style 2</a></li>-->
-<!--                    <li><a href="index-demo-3.html">Home style 3</a></li>-->
-<!--                    <li><a href="index-demo-4.html">Home style 4</a></li>-->
-<!--                    <li><a href="index-demo-5.html">Home style 5</a></li>-->
-<!--                    <li><a href="index-demo-6.html">Home style 6</a></li>-->
-<!--                  </ul>-->
-                </li>
-                <li><a @click="goToPage('/calendar')">Calendar</a></li>
-                <li><a @click="goToPage('/about')">About Us</a></li>
-                <li><a @click="goToPage('/services')">Services</a></li>
-                <li><a @click="goToPage('/faq')">FAQ</a></li>
-                <li>
-                  <a @click="goToPage('/blog')">Blog</a>
-<!--                  <ul class="dropdown">-->
-<!--                    <li><a href="index-blog.html">Blog Posts</a></li>-->
-<!--                    <li>-->
-<!--                      <a href="index-blog-with-sidebar.html">Sidebar Blog </a>-->
-<!--                    </li>-->
-<!--                    <li><a href="index-single-blog.html">Blog Details</a></li>-->
-<!--                  </ul>-->
-                </li>
-                <li><a @click="goToPage('/contact')">Contact</a></li>
+                <li><a @click="goToPage('/')">首页</a></li>
+                <li><a @click="goToPage('/calendar')">记录日历</a></li>
+                <li><a @click="goToPage('/about')">关于我们</a></li>
+                <li><a @click="goToPage('/services')">我的服务</a></li>
+                <li><a @click="goToPage('/faq')">常见问题</a></li>
+                <li><a @click="goToPage('/blog')">我的博客</a></li>
+                <li><a @click="goToPage('/contact')">联系我们</a></li>
               </ul>
-
-              <!-- Button -->
-              <!--              <a href="#" class="btn login-btn ml-50" @click="login">Log in</a>-->
-              <div class="btn login-btn ml-50" @click="goToPage('/login')">
-                登 录
-              </div>
             </div>
             <!-- Nav End -->
           </div>
+
+          <div
+            v-if="!name"
+            class="btn login-btn ml-50"
+            @click="goToPage('/login')"
+          >
+            登 录
+          </div>
+          <a v-else>
+            <el-avatar
+              :size="25"
+              style="position: relative; top: 7px"
+              :src="circleUrl"
+            />
+            <span style="color: pink; padding-left: 5px">{{ name }}</span> ,
+            <span style="color: #00a8ff" @click="goToQuit"> 退出</span>
+          </a>
         </nav>
       </div>
     </div>
@@ -74,13 +67,40 @@
 
 <script setup lang="ts">
 import { useRouter } from "vue-router";
+import { ElMessage, ElMessageBox } from "element-plus";
+import { ref } from "vue";
 const router = useRouter();
+const circleUrl = ref(
+  "http://47.94.106.106:8888/group1/M00/5D/BE/rBHxiGHELhWAJRuVAABU0vxqD4w4979165"
+);
 console.log(import.meta.env);
+const name = localStorage.getItem("name");
+console.log(name);
 const goToPage = (path: string) => {
-  console.log("111");
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
   router.push({ path: path });
 };
-
+const goToQuit = () => {
+  ElMessageBox.confirm("此操作将会退出当前登录用户?", "退出登录", {
+    confirmButtonText: "确认退出",
+    cancelButtonText: "点错了",
+    type: "warning",
+  })
+    .then(() => {
+      ElMessage({
+        type: "success",
+        message: "退出成功，请重新登录",
+      });
+      localStorage.clear();
+      router.push("/login");
+    })
+    .catch(() => {
+      ElMessage({
+        type: "info",
+        message: "点错了，已取消",
+      });
+    });
+};
 // import { useRouter } from "vue-router";
 // function goToPage(path: string){
 //   const router = useRouter();

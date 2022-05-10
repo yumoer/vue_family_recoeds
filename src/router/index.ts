@@ -40,7 +40,7 @@ const router = createRouter({
       path: "/faq",
       name: "faq",
       meta: {
-        title: "服务",
+        title: "问题",
       },
       component: () => import("@/views/Faq/faq.vue"),
     },
@@ -48,7 +48,7 @@ const router = createRouter({
       path: "/contact",
       name: "contact",
       meta: {
-        title: "服务",
+        title: "联系",
       },
       component: () => import("@/views/Contact/contact.vue"),
     },

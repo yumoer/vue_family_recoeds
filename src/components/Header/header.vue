@@ -6,16 +6,14 @@
         <!-- Classy Menu -->
         <nav class="classy-navbar light justify-content-between" id="dreamNav">
           <!-- Logo -->
-          <a class="nav-brand light" @click="goToPage('/')"
-            ><img src="src/assets/img/core-img/logo.png" alt="logo" /> Life
+          <a class="nav-brand light" @click="goToPage('/')"><img src="src/assets/img/core-img/logo.png" alt="logo" />
+            Life
             Drips
           </a>
 
           <!-- Navbar Toggler -->
           <div class="classy-navbar-toggler demo">
-            <span class="navbarToggler"
-              ><span>22</span><span></span><span></span
-            ></span>
+            <span class="navbarToggler"><span>22</span><span></span><span></span></span>
           </div>
 
           <!-- Menu -->
@@ -42,19 +40,11 @@
             <!-- Nav End -->
           </div>
 
-          <div
-            v-if="!name"
-            class="btn login-btn ml-50"
-            @click="goToPage('/login')"
-          >
+          <div v-if="!name" class="btn login-btn ml-50" @click="goToPage('/login')">
             登 录
           </div>
           <a v-else>
-            <el-avatar
-              :size="25"
-              style="position: relative; top: 7px"
-              :src="circleUrl"
-            />
+            <el-avatar :size="25" style="position: relative; top: 7px" :src="circleUrl" />
             <span style="color: pink; padding-left: 5px">{{ name }}</span> ,
             <span style="color: #00a8ff" @click="goToQuit"> 退出</span>
           </a>
@@ -112,4 +102,5 @@ const goToQuit = () => {
 // };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>

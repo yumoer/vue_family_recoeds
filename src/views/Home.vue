@@ -1,8 +1,6 @@
 <template>
   <div class="home">
-
-<!--    <h1>日历</h1>-->
-<!--    <button @click="login">登录</button>-->
+   <button @click="login">退出</button>
   </div>
 </template>
 

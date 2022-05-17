@@ -1,6 +1,10 @@
-import { fileURLToPath } from 'url'
+// @ts-ignore
+import { fileURLToPath } from "url"
+// @ts-ignore
 import { defineConfig } from 'vite'
+// @ts-ignore
 import vue from '@vitejs/plugin-vue'
+// @ts-ignore
 import vueJsx from '@vitejs/plugin-vue-jsx'
 
 // https://vitejs.dev/config/
@@ -49,7 +53,7 @@ export default defineConfig({
       '/api': {
         target: "https://xxxx.com/",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, '')
+        rewrite: ( path ) => path.replace(/^\/api/, '')
       }
     }
   },

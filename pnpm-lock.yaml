@@ -311,15 +311,6 @@ packages:
       concat-map: registry.nlark.com/concat-map/0.0.1
     dev: true
 
-  registry.nlark.com/braces/3.0.2:
-    resolution: {integrity: sha1-NFThpGLujVmeI23zNs2epPiv4Qc=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/braces/download/braces-3.0.2.tgz}
-    name: braces
-    version: 3.0.2
-    engines: {node: '>=8'}
-    dependencies:
-      fill-range: registry.nlark.com/fill-range/7.0.1
-    dev: true
-
   registry.nlark.com/buffer-crc32/0.2.13:
     resolution: {integrity: sha1-DTM+PwDqxQqhRUq9MO+MKl2ackI=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/buffer-crc32/download/buffer-crc32-0.2.13.tgz}
     name: buffer-crc32
@@ -720,15 +711,6 @@ packages:
       flat-cache: registry.nlark.com/flat-cache/3.0.4
     dev: true
 
-  registry.nlark.com/fill-range/7.0.1:
-    resolution: {integrity: sha1-GRmmp8df44ssfHflGYU12prN2kA=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/fill-range/download/fill-range-7.0.1.tgz}
-    name: fill-range
-    version: 7.0.1
-    engines: {node: '>=8'}
-    dependencies:
-      to-regex-range: registry.nlark.com/to-regex-range/5.0.1
-    dev: true
-
   registry.nlark.com/flat-cache/3.0.4:
     resolution: {integrity: sha1-YbAzgwKy/p+Vfcwy/CqH8cMEixE=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/flat-cache/download/flat-cache-3.0.4.tgz}
     name: flat-cache
@@ -1000,13 +982,6 @@ packages:
       is-path-inside: registry.nlark.com/is-path-inside/3.0.3
     dev: true
 
-  registry.nlark.com/is-number/7.0.0:
-    resolution: {integrity: sha1-dTU0W4lnNNX4DE0GxQlVUnoU8Ss=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-number/download/is-number-7.0.0.tgz}
-    name: is-number
-    version: 7.0.0
-    engines: {node: '>=0.12.0'}
-    dev: true
-
   registry.nlark.com/is-path-inside/3.0.3:
     resolution: {integrity: sha1-0jE2LlOgf/Kw4Op/7QSRYf/RYoM=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/is-path-inside/download/is-path-inside-3.0.3.tgz}
     name: is-path-inside
@@ -1199,8 +1174,8 @@ packages:
     version: 4.0.4
     engines: {node: '>=8.6'}
     dependencies:
-      braces: registry.nlark.com/braces/3.0.2
-      picomatch: registry.nlark.com/picomatch/2.3.0
+      braces: registry.npmmirror.com/braces/3.0.2
+      picomatch: registry.npmmirror.com/picomatch/2.3.0
     dev: true
 
   registry.nlark.com/mimic-fn/2.1.0:
@@ -1740,15 +1715,6 @@ packages:
     name: to-fast-properties
     version: 2.0.0
     engines: {node: '>=4'}
-    dev: true
-
-  registry.nlark.com/to-regex-range/5.0.1:
-    resolution: {integrity: sha1-FkjESq58jZiKMmAY7XL1tN0DkuQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.nlark.com/to-regex-range/download/to-regex-range-5.0.1.tgz}
-    name: to-regex-range
-    version: 5.0.1
-    engines: {node: '>=8.0'}
-    dependencies:
-      is-number: registry.nlark.com/is-number/7.0.0
     dev: true
 
   registry.nlark.com/token-stream/1.0.0:
@@ -3068,7 +3034,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       fill-range: registry.npmmirror.com/fill-range/7.0.1
+<<<<<<< HEAD
     dev: false
+=======
+>>>>>>> 747b28bbd1bc4179da6f7db1e08d669ac7c21203
 
   registry.npmmirror.com/browserslist/4.19.1:
     resolution: {integrity: sha512-u2tbbG5PdKRTUoctO3NBD8FQ5HdPh1ZXPHzp1rwaa5jTc+RV9/+RlWiAIKmjRPQF+xbGM9Kklj5bZQFa2s/38A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/browserslist/download/browserslist-4.19.1.tgz}
@@ -3849,7 +3818,10 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       to-regex-range: registry.npmmirror.com/to-regex-range/5.0.1
+<<<<<<< HEAD
     dev: false
+=======
+>>>>>>> 747b28bbd1bc4179da6f7db1e08d669ac7c21203
 
   registry.npmmirror.com/flatted/3.2.4:
     resolution: {integrity: sha512-8/sOawo8tJ4QOBX8YlQBMxL8+RLZfxMQOif9o0KUKTNTjMYElWPE0r/m5VNFxTRd0NSw8qSy8dajrwX4RYI1Hw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/flatted/download/flatted-3.2.4.tgz}
@@ -3897,7 +3869,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/glob-parent/5.1.2:
-    resolution: {integrity: sha1-hpgyxYA0/mikCTwX3BXoNA2EAcQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/glob-parent/download/glob-parent-5.1.2.tgz}
+    resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/glob-parent/-/glob-parent-5.1.2.tgz}
     name: glob-parent
     version: 5.1.2
     engines: {node: '>= 6'}
@@ -4029,7 +4001,10 @@ packages:
     name: is-number
     version: 7.0.0
     engines: {node: '>=0.12.0'}
+<<<<<<< HEAD
     dev: false
+=======
+>>>>>>> 747b28bbd1bc4179da6f7db1e08d669ac7c21203
 
   registry.npmmirror.com/joi/17.5.0:
     resolution: {integrity: sha512-R7hR50COp7StzLnDi4ywOXHrBrgNXuUUfJWIR5lPY5Bm/pOD3jZaTwpluUXVLRWcoWZxkrHBBJ5hLxgnlehbdw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/joi/download/joi-17.5.0.tgz}
@@ -4227,12 +4202,15 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+<<<<<<< HEAD
   registry.npmmirror.com/normalize-wheel-es/1.1.2:
     resolution: {integrity: sha512-scX83plWJXYH1J4+BhAuIHadROzxX0UBF3+HuZNY2Ks8BciE7tSTQ+5JhTsvzjaO0/EJdm4JBGrfObKxFf3Png==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/normalize-wheel-es/-/normalize-wheel-es-1.1.2.tgz}
     name: normalize-wheel-es
     version: 1.1.2
     dev: false
 
+=======
+>>>>>>> 747b28bbd1bc4179da6f7db1e08d669ac7c21203
   registry.npmmirror.com/npm-run-path/4.0.1:
     resolution: {integrity: sha1-t+zR5e1T2o43pV4cImnguX7XSOo=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/npm-run-path/download/npm-run-path-4.0.1.tgz}
     name: npm-run-path
@@ -4276,7 +4254,10 @@ packages:
     name: picomatch
     version: 2.3.0
     engines: {node: '>=8.6'}
+<<<<<<< HEAD
     dev: false
+=======
+>>>>>>> 747b28bbd1bc4179da6f7db1e08d669ac7c21203
 
   registry.npmmirror.com/pinia/2.0.9_typescript@4.5.4+vue@3.2.26:
     resolution: {integrity: sha512-iuYdxLJKQ07YPyOHYH05wNG9eKWqkP/4y4GE8+RqEYtz5fwHgPA5kr6zQbg/DoEJGnR2XCm1w1vdt6ppzL9ATg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/pinia/download/pinia-2.0.9.tgz}
@@ -4330,7 +4311,7 @@ packages:
     dev: true
 
   registry.npmmirror.com/punycode/2.1.1:
-    resolution: {integrity: sha1-tYsBCsQMIsVldhbI0sLALHv0eew=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/punycode/download/punycode-2.1.1.tgz}
+    resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/punycode/-/punycode-2.1.1.tgz}
     name: punycode
     version: 2.1.1
     engines: {node: '>=6'}
@@ -4536,7 +4517,10 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: registry.npmmirror.com/is-number/7.0.0
+<<<<<<< HEAD
     dev: false
+=======
+>>>>>>> 747b28bbd1bc4179da6f7db1e08d669ac7c21203
 
   registry.npmmirror.com/type-fest/0.20.2:
     resolution: {integrity: sha1-G/IH9LKPkVg2ZstfvTJ4hzAc1fQ=, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/type-fest/download/type-fest-0.20.2.tgz}
